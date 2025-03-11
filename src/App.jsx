@@ -6,10 +6,10 @@ function App() {
 
   return (
     <>
-   <Navbar/>
-   <Hero/>
-   <Footer/>
-     </>
+      <Navbar />
+      <Hero />
+      <Footer />
+    </>
   )
 }
 
