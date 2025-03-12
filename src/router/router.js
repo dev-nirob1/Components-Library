@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Main from "../layout/MainLayout/Main";
-import Button from "../components/CssComponents/Button";
+import ButtonPage from "../components/Buttons/ButtonPage";
 
 export const router = createBrowserRouter([
     {
         path: '/',
-        Component: App 
+        Component: App
     },
     {
         path: '/components',
@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: 'button',
-                Component: Button
+                Component: ButtonPage
             }
         ]
     }

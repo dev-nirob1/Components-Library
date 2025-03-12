@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div className="h-screen dark:bg-gray-900 border-r pl-2">
-      <h3 className="text-lg font-bold my-2">Components</h3>
+    <div className="h-screen dark:bg-gray-900 border-r border-r-blue-50 pl-2 shadow">
+      <h3 className="text-lg font-bold py-2">Components</h3>
       <nav className="space-y-2 font-semibold text-gray-500">
         <Link
           to="/components/button"

@@ -7,9 +7,11 @@ const Main = () => {
     return (
         <>
             <Navbar />
-            <div className="container mx-auto grid grid-cols-4 min-h-screen">
-                <Sidebar />
-                <div className="col-span-3">
+            <div className="container mx-auto grid grid-cols-12 gap-5 min-h-screen">
+                <div className="col-span-2">
+                    <Sidebar />
+                </div>
+                <div className="col-span-10 p-5">
                     <Outlet />
                 </div>
             </div>
