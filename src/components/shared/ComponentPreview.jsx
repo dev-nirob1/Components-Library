@@ -23,20 +23,20 @@ const ComponentPreview = ({ title, code, children }) => {
                 </button>
             </div>
             <div>
-        {activeTab === "preview" ? (
-          <div className="p-4 border border-gray-200 rounded-md">{children}</div>
-        ) : (
-          <div className="relative bg-gray-900 text-white rounded-md p-4 text-sm">
-            <button
-            //   onClick={copyToClipboard}
-              className="absolute top-2 right-2 bg-gray-700 text-white px-2 py-1 rounded text-xs"
-            >
-              <FaCopy size={14} />
-            </button>
-            <pre className="whitespace-pre-wrap">{code}</pre>
-          </div>
-        )}
-      </div>
+                {activeTab === "preview" ? (
+                    <div className="p-4 border border-gray-200 rounded-md">{children}</div>
+                ) : (
+                    <div className="relative bg-gray-900 text-white rounded-md p-4">
+                        <button
+                            //   onClick={copyToClipboard}
+                            className="absolute top-2 right-2 bg-gray-700 text-white px-2 py-1 rounded cursor-pointer"
+                        >
+                            <FaCopy size={16} />
+                        </button>
+                        <pre className="whitespace-pre-wrap">{code}</pre>
+                    </div>
+                )}
+            </div>
         </div>
     );
 };
