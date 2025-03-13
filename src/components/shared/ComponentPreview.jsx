@@ -1,17 +1,15 @@
 import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css"; // Dark theme (you can change this)
 import "prismjs/components/prism-jsx"; 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaCode, FaCopy, FaEye } from "react-icons/fa6";
 
 const ComponentPreview = ({ title, code, children }) => {
     const [activeTab, setActiveTab] = useState('preview')
-    const codeRef = useRef(null);
 
     useEffect(() => {
-        if (codeRef.current) {
-            Prism.highlightElement(codeRef.current);
-        }
+            Prism.highlightAll();
+        
     }, [activeTab]);
     return (
         <div className="mb-8">
@@ -44,7 +42,7 @@ const ComponentPreview = ({ title, code, children }) => {
                             <FaCopy size={16} />
                         </button>
                         <pre className="whitespace-pre-wrap">
-                        <code ref={codeRef} className="language-jsx">
+                        <code className="language-jsx">
                                 {code}
                             </code>
                         </pre>
